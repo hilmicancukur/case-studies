@@ -1,0 +1,12 @@
+extends includes/layout.pug
+include mixins/_card.pug
+include mixins/_pagination.pug
+
+block content
+    include includes/breadcrumb.pug
+    
+    section.container
+        .grid-cards
+            each member in members
+                +Card(member)
+        +Pagination(current_page,total_page)

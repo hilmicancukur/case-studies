@@ -1,0 +1,18 @@
+extends includes/layout.pug
+include mixins/_alert.pug
+
+block content
+    section.container
+        .card
+            .card__title Create Member
+            form.form__wrapper(action="/create-member",method="POST") 
+                .form__group
+                    input.form__control(type="text",name="name",placeholder="Name *",required)
+                .from__group
+                    input.form__control(type="text",name="job",placeholder="Job *",required)
+                button.btn.btn--primary(type="submit") Create 
+                button.btn.btn--primary(type="button",onclick="history.back()") Back
+    if alert == "Success"
+        +Alert('alert--success','icon__check','Successfully Sent')
+    if alert == "Danger"
+        +Alert("alert--danger","icon__close","Error")

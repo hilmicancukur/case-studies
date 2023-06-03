@@ -1,0 +1,9 @@
+mixin Alert(className, icon, description)
+    .alert.js-alert(class=className)
+        .alert__content
+            .alert__icon
+                figure.icon__wrapper(class=icon)
+                    svg.icon
+                        use(xlink:href=`#${icon}`)
+            .alert__description #{description}
+            button.alert__btn-close.js-close-alert(type="button",onclick="closeAlert()") OK

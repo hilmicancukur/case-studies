@@ -1,0 +1,15 @@
+mixin Card(item, member_detail)
+    -
+        var id = item.id;
+        var title = item.first_name + ' ' + item.last_name;
+        var image = item.avatar;
+        var description = item.email;
+    .card
+        img.card__image(src=image, title=title)
+        .card__title #{title}
+        .card__description #{description}
+        .card__footer
+            if member_detail
+                button.btn.btn--secondary(onclick="history.back()") Back
+            else 
+                a.btn.btn--secondary(href="/member/"+id) Review

@@ -1,0 +1,20 @@
+mixin Pagination(current_page, total_page)
+    ul.pagination
+        if current_page > 1
+            li
+                a.pagination__link(href='/?page='+(current_page-1))
+                    figure.icon__wrapper.icon__chevron-left
+                        svg.icon
+                            use(xlink:href="#icon__chevron-left")
+        - for (var i = 1; i <= total_page; i++)
+            li
+                if i==current_page
+                    button.pagination__link.active(type="button") #{i}
+                else
+                    a.pagination__link(href='/?page='+i) #{i}
+        if current_page < total_page
+            li
+                a.pagination__link(href='/?page='+(current_page+1))
+                    figure.icon__wrapper.icon__chevron-right
+                        svg.icon
+                            use(xlink:href="#icon__chevron-right")

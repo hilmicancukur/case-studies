@@ -1,0 +1,10 @@
+.header{
+    background: transparent linear-gradient(90deg, var(--c-blue) 0%, var(--c-dark-blue) 100%) 0% 0% no-repeat padding-box;
+    padding: 2.375rem 0.75rem;
+    text-align: center;
+    color: var(--c-white);
+}
+.header__title{
+    font-weight: 900;
+    font-size: 2rem;
+}

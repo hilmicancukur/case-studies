@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&amp;display=swap">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__title">Pixelplus Case Study</h1>
+    </header>
+    <main class="page">
+      <section class="container">
+        <div class="card">
+          <div class="card__title">Create Member</div>
+          <form class="form__wrapper" id="js-create-form" action="https://reqres.in/api/users" method="POST"> 
+            <div class="form__group">
+              <input class="form__control" type="text" name="name" placeholder="Name *" required>
+            </div>
+            <div class="from__group">
+              <input class="form__control" type="text" name="job" placeholder="Job *" required>
+            </div>
+            <button class="btn btn--primary" type="submit">Create </button>
+            <button class="btn btn--primary" type="button" onclick="history.back()">Back</button>
+          </form>
+        </div>
+      </section>
+      <div id="js-alert-wrapper"></div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <p>Copyright 2023</p>
+      </div>
+    </footer>
+    <script src="js/main.js"> </script>
+    <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <defs>
+        <symbol id="icon-chevron-left" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"></path>
+        </symbol>
+        <symbol id="icon-chevron-right" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
+        </symbol>
+      </defs>
+    </svg>
+  </body>
+</html>
